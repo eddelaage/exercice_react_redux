@@ -7,13 +7,15 @@ import Ereur from './components/pages/Ereur';
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/login" component={LoginPage} />
-          <Route component={Ereur} />
-        </Switch>
-      </BrowserRouter>
+      <div className="ui container">
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/login" component={LoginPage} />
+            <Route component={Ereur} />
+          </Switch>
+        </BrowserRouter>
+      </div>
     )
   }
 }
