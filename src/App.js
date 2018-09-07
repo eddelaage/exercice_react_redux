@@ -1,6 +1,21 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import HomePage from './components/pages/HomePage';
+import LoginPage from './components/pages/LoginPage';
+import Ereur from './components/pages/Ereur';
 
-const App = () =>
-  <div>Hello world</div>
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/login" component={LoginPage} />
+          <Route component={Ereur} />
+        </Switch>
+      </BrowserRouter>
+    )
+  }
+}
 
 export default App;
